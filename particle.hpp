@@ -6,8 +6,8 @@
 class particle {
 public:
     particle();
-    particle(const &particle);
-    particle(int R, int G, int B, int x, int y);
+    particle(const particle&);
+    particle(int R, int G, int B, int x, int y, int vel_x, int vel_y, int aoi);
     ~particle();
 
     void getColor(int &R, int &G, int &B);
@@ -26,6 +26,6 @@ private:
     int x, y;
     int vel_x, vel_y;
     int aoi; //Area of influence
-}
+};
 
 #endif
